@@ -1,40 +1,49 @@
-// colors[
-//     "black",
-//     "blue",
-//     "green",
-//     "red",
-//     "yellow",
-//     "white"
-// ];
-// 2 t/m 13
-function create(){
-    var array = [];
+var colors=[
+    "black",
+    "blue",
+    "green",
+    "red",
+    "yellow",
+    "white"
+];
+var arrayBlock=[];
+var arraySquircles=[];
+var arrayCircles=[];
+
+function generate(){
     var block;
     for(i=1;i<=12;i++){
         block = document.createElement("div");
         block.className = "block";
         block.id = "row"+i;
         document.body.appendChild(block);
-        array.push(block)
+        arrayBlock.push(block);
     }
-    console.log(array);
     var div;
-    var test = document.body.getElementsByTagName("div");
-    for(i=0;i<12;i++){
+    for(i=1;i<=12;i++){
+        var tempArray0 = [];
+        var tempArray1 = [];
         div = document.createElement("div");
-        console.log(array[i]);
-        test[i].appendChild(div);
+        div.id = "div"+i;
+        div.className = "div";
+        document.getElementById("row"+i).appendChild(div);
         for(n=0;n<4;n++){
             var squircle = document.createElement("span");
             squircle.className = "squircles";
-            test2[i].appendChild(squircle);
+            document.getElementById("div"+i).appendChild(squircle);
+            tempArray0.push(squircle);
         }
+        arraySquircles.push(tempArray0);
         for(j=0;j<4;j++){
-            var Circle = document.createElement("span");
-            Circle.className = "circles";
-            document.getElementById().appendChild(Circle);
+            var circle = document.createElement("span");
+            circle.className = "circles"
+            document.getElementById("row"+i).appendChild(circle);
+            tempArray1.push(circle);
         }
+        arrayCircles.push(tempArray1);
     }
-    var test2 = document.getElementById("row"+1).getElementsByTagName("div");
+    console.log(arrayCircles);
+    console.log(arraySquircles);
+    console.log(arrayBlock);
 }
-create()
+generate()

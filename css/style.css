@@ -1,23 +1,42 @@
 .block{
-    width: 180px;
+    width: 300px;
     height: 60px;
     margin: 0 auto;
     border-radius: 8px;
     background-color: rgb(253, 178, 81);
 }
 .circles{
-    height: 30px;
-    width: 30px;
-    background-color: rgb(143, 142, 142);
+    height: 40px;
+    width: 40px;
+    background-color: rgb(225, 225, 250);
     border: 1px black solid;
     border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 10px;
     display: inline-block;
+    text-align: center;
 }
 .squircles{
     width: 10px;
     height: 10px;
-    margin: 0 auto;
-    margin-bottom: 3px;
     border-radius: 4px;
-    background-color: rgb(0, 0, 0);
+    border: solid 1px rgb(0, 0, 0);
+    display: inline-block;
+}
+.block>:nth-child(2){
+    margin-left: 20px;
+}
+.div{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    bottom: 4px;
+    left: 10px;
+}
+.div>:nth-child(2){
+    margin-left: 5px;
+}
+.div>:nth-child(4){
+    margin-left: 5px;
 }
