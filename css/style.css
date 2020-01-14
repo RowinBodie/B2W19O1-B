@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(144, 175, 136);
+}
 .block{
     width: 300px;
     height: 60px;
@@ -8,7 +11,7 @@
 .circles{
     height: 40px;
     width: 40px;
-    background-color: rgb(225, 225, 250);
+    background-color: lavender;
     border: 1px black solid;
     border-radius: 50%;
     margin-left: 20px;
@@ -34,9 +37,19 @@
     bottom: 4px;
     left: 10px;
 }
-.div>:nth-child(2){
+.div>:nth-child(2),.div>:nth-child(4){
     margin-left: 5px;
 }
-.div>:nth-child(4){
-    margin-left: 5px;
+#answer{
+    background-color: rgb(253, 178, 81);
+    width: 46px;
+    height: 230px;
+    position: absolute;
+    display: inline-block;
+    border-radius: 10%;
+    top: 100px;
+    left: 500px;
+}
+#answer>span{
+    margin-left: 2px;
 }

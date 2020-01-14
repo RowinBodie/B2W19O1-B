@@ -9,6 +9,9 @@ var colors=[
 var arrayBlock=[];
 var arraySquircles=[];
 var arrayCircles=[];
+var theCode=[];
+var tempArray=[];
+var counter = 11;
 
 function generate(){
     var block;
@@ -19,11 +22,10 @@ function generate(){
         document.body.appendChild(block);
         arrayBlock.push(block);
     }
-    var div;
     for(i=1;i<=12;i++){
         var tempArray0 = [];
         var tempArray1 = [];
-        div = document.createElement("div");
+        var div = document.createElement("div");
         div.id = "div"+i;
         div.className = "div";
         document.getElementById("row"+i).appendChild(div);
@@ -42,8 +44,36 @@ function generate(){
         }
         arrayCircles.push(tempArray1);
     }
+    var div2 = document.createElement("div");
+    div2.id = "answer";
+    document.body.appendChild(div2);
+    for(j=0;j<4;j++){
+        var circle = document.createElement("span");
+        circle.className = "circles";
+        document.getElementById("answer").appendChild(circle);
+    }
     console.log(arrayCircles);
     console.log(arraySquircles);
     console.log(arrayBlock);
 }
-generate()
+function code(){
+    for(i=0;i<4;i++){
+        number = Math.floor(Math.random() * 6);
+        singleCode = colors[number];
+        if(number = number){
+            number = Math.floor(Math.random() * 6);
+            singleCode = colors[number];
+        }
+        theCode.push(singleCode)
+    }
+    console.log(theCode);
+    start()
+}
+function start(){
+    var div = document.createElement
+}
+function selectColor(){
+    
+}
+generate();
+code();
