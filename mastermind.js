@@ -67,10 +67,9 @@ function code(){
         theCode.push(singleCode)
     }
     console.log(theCode);
-    start()
 }
 function start(){
-    var div = document.createElement
+    
 }
 function selectColor(){
     
